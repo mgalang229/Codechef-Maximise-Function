@@ -22,7 +22,7 @@ int main() {
 		long long high = a[n - 1];
 		// create a 'temp' variable to find the correct element that would produce the largest sum
 		long long temp = LLONG_MIN;
-		for (int i = 0; i < n - 1; i++) {
+		for (int i = 1; i < n - 1; i++) {
 			// check if the the current element would produce a larger sum than the stored sum
 			if (abs(low - a[i]) + abs(a[i] - high) + abs(high - low) > abs(low - temp) + abs(temp - high) + abs(high - low)) {
 				temp = a[i];
